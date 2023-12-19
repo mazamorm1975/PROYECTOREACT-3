@@ -1,18 +1,23 @@
-import { useState } from "react"
+import { useState } from "react";
+import { PropTypes} from 'prop-types';
 
 // eslint-disable-next-line react/prop-types
-export const CounterApp = ({valor}) =>{
-
-  const [contar, setContar] = useState(valor);
-
-  const incrementarValor = () => setContar(c => c +1);
+export const CounterApp = ({ valor }) => {
+  const [contador, setContador] = useState(valor);
+  const autoIncrementador = () => setContador((c) => c + 1);
 
   return (
     <>
-    <h2>Contador Incrementador {contar}</h2>
-    <button
-      onClick={incrementarValor}
-    >Incrementar en 1</button>
-
+      <h1>Autoincrementador {contador}</h1>
+      <button onClick={autoIncrementador}>Incrementar valor en {valor}</button>
     </>
-  )}
+  );
+};
+
+CounterApp.PropTypes = {
+  valor: PropTypes.number.isRequired,
+}
+
+CounterApp.defaultProps = {
+  valor: 1000,
+}
