@@ -5,6 +5,6 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CounterApp valor = {10000} />
+    <CounterApp valor={1} />
   </React.StrictMode>
 );
