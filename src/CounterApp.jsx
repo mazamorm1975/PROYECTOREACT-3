@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PropTypes} from 'prop-types';
+import { PropTypes } from "prop-types";
 
 // eslint-disable-next-line react/prop-types
 export const CounterApp = ({ valor }) => {
@@ -14,10 +14,10 @@ export const CounterApp = ({ valor }) => {
   );
 };
 
-CounterApp.PropTypes = {
+CounterApp.propTypes = {
   valor: PropTypes.number.isRequired,
-}
+};
 
 CounterApp.defaultProps = {
   valor: 1000,
-}
+};
